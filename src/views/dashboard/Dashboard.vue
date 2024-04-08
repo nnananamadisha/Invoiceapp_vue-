@@ -60,6 +60,11 @@
 
 <script>
 import axios from 'axios'
+import bulmaToast from 'bulma-toast';
+
+
+Vue.prototype.$bulmaToast = bulmaToast;
+
 
 export default {
     name: 'Dashboard',

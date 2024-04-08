@@ -1,10 +1,21 @@
-import {createApp} from 'vue';
+import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:8000';
+// Set the base URL for axios
+axios.defaults.baseURL = 'http://127.0.0.1:8000';
 
+// Create the Vue application instance
+const app = createApp(App);
 
-createApp(App).use(store).use(router, axios).mount('#app');
+// Use Vue plugins and components
+app.use(router);
+app.use(store);
+
+// Make axios accessible in components as $axios
+app.config.globalProperties.$axios = axios;
+
+// Mount the app to the DOM
+app.mount('#app');

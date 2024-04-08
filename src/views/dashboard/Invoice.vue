@@ -95,7 +95,6 @@
 <script>
     import axios from 'axios'
     import { toast } from 'bulma-toast'
-    
 
     const fileDownload = require('js-file-download')
 

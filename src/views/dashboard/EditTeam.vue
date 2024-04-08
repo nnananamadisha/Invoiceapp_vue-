@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="page-edit-team">
         <nav class="breadcrumb" aria-label="breadcrumbs">
